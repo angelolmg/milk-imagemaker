@@ -98,8 +98,8 @@ public class ObjectLocalizer : MonoBehaviour
             }
 
         }
-
-        screenshotManager.TakeScreenshotAndLabel(labelingInfos);
+        if(detectedObjs > 0)
+            screenshotManager.TakeScreenshotAndLabel(labelingInfos);
 
     }
 

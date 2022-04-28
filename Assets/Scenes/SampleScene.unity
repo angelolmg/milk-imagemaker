@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 370812285}
   - component: {fileID: 370812284}
   m_Layer: 0
-  m_Name: ScreenshotManager
+  m_Name: Screenshot Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -586,7 +586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1503062062992808406, guid: abfa913b45001e94c9acfa9a8f4d1772, type: 3}
       propertyPath: spawnDelay
-      value: 3
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1503062062992808406, guid: abfa913b45001e94c9acfa9a8f4d1772, type: 3}
       propertyPath: items.Array.data[0]
