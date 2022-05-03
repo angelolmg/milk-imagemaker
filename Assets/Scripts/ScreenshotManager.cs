@@ -6,18 +6,30 @@ using System.IO;
 
 public class ScreenshotManager : MonoBehaviour
 {
-
+    const int FILENAMELENGHT = 5;
     private string screenshotDirectoryName = "Screenshots";
     private string labelDirectoryName = "Labels";
+
+    private string GenerateRandomString(int charAmount){
+        const string glyphs = "abcdefghijklmnopqrstuvwxyz0123456789";
+        string myString = "";
+
+        for(int i=0; i < charAmount; i++)
+            myString += glyphs[UnityEngine.Random.Range(0, glyphs.Length)];
+
+        return myString;
+
+    }
 
     public void TakeScreenshotAndLabel(List<LabelingInfo> labelingInfos)
     {
         DirectoryInfo screenshotDirectory = Directory.CreateDirectory(screenshotDirectoryName);
         DirectoryInfo labelDirectory = Directory.CreateDirectory(labelDirectoryName);
 
-        string timeNow = DateTime.Now.ToString("dd-MMMM-yyyy HHmmss");
-        string screenshotFileName = timeNow + ".jpg";
-        string labelFileName = timeNow + ".txt";
+        //string timeNow = DateTime.Now.ToString("dd-MMMM-yyyy HHmmss");
+        string fileName = GenerateRandomString(FILENAMELENGHT);
+        string screenshotFileName = fileName + ".jpg";
+        string labelFileName = fileName + ".txt";
         string stringToWrite = "";
 
         foreach(LabelingInfo li in labelingInfos){

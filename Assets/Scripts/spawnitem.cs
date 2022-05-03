@@ -16,9 +16,18 @@ public class spawnitem : MonoBehaviour
     public void Spawn()
     {
         index = Random.Range (0, items.Length);
+        Quaternion rotation = Quaternion.Euler(-90, Random.Range (0, 360), Random.Range (0, 360));
+
+
         GameObject item = (GameObject)Instantiate(items[index], 
                                                   transform.position + Random.insideUnitSphere * spawnRadius, 
-                                                  Random.rotation);
+                                                  rotation);
+        if(Random.value >= 0.3){
+            item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX |
+                                                         RigidbodyConstraints.FreezeRotationY | 
+                                                         RigidbodyConstraints.FreezeRotationZ;
+        }
+            
     }
 
     IEnumerator SpawnRoutine()
