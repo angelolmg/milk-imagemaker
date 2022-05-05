@@ -22,7 +22,7 @@ public class spawnitem : MonoBehaviour
         GameObject item = (GameObject)Instantiate(items[index], 
                                                   transform.position + Random.insideUnitSphere * spawnRadius, 
                                                   rotation);
-        if(Random.value >= 0.3){
+        if(Random.value >= 0.7){
             item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX |
                                                          RigidbodyConstraints.FreezeRotationY | 
                                                          RigidbodyConstraints.FreezeRotationZ;

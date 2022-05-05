@@ -67,7 +67,7 @@ public class ObjectLocalizer : MonoBehaviour
         return Rect.MinMaxRect( min_x, min_y, max_x, max_y );
     }
 
-    void Localize()
+    public void Localize()
     {
         int detectedObjs = 0;
         GameObject[] objects = GameObject.FindGameObjectsWithTag("Product");
@@ -114,12 +114,12 @@ public class ObjectLocalizer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Take screenshot once
         if (Input.GetKeyDown("space"))
         {
             //print("Localizing objects...");
             Localize();
         }
-
-        
+     
     }
 }
