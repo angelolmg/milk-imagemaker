@@ -45,7 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 5034775349709128389, guid: bb65061f30804044299ad31a6fd32cc7, type: 3}
   - {fileID: 6623581126248860286, guid: 3517144d1796356478bb259c08a64848, type: 3}
-  spawnDelay: 0.8
+  - {fileID: 5034775349709128389, guid: bb65061f30804044299ad31a6fd32cc7, type: 3}
+  spawnDelay: 0.115
   spawnRadius: 3
+  maxConnectedItems: 4
+  spawnMultipleChance: 0.3
+  uprightItemChance: 0.3
+  padding: 0.015

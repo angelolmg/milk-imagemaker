@@ -7,8 +7,8 @@ using System.IO;
 public class ScreenshotManager : MonoBehaviour
 {
     const int FILENAMELENGHT = 5;
-    private string screenshotDirectoryName = "Screenshots-v8";
-    private string labelDirectoryName = "Labels-v8";
+    private string screenshotDirectoryName = "Screenshots-v9";
+    private string labelDirectoryName = "Labels-v9";
 
     private string GenerateRandomString(int charAmount){
         const string glyphs = "abcdefghijklmnopqrstuvwxyz0123456789";

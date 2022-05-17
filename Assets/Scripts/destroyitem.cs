@@ -6,7 +6,7 @@ public class destroyitem : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Product")
+        if (col.gameObject != null && col.gameObject.tag == "Product")
             Destroy(col.gameObject);
     }
 }

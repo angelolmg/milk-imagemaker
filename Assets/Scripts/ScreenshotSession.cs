@@ -10,6 +10,7 @@ public class ScreenshotSession : MonoBehaviour
     public float screenshotDelay = 1f;
     public int numberOfPhotosToTake = 10;
     private int photosTaken = 0;
+    private int nitens = 0;
 
     private ObjectLocalizer objLocalizer;
 
@@ -18,14 +19,17 @@ public class ScreenshotSession : MonoBehaviour
         yield return new WaitForSeconds(screenshotDelay);
 
         if (photosTaken < numberOfPhotosToTake){
-            objLocalizer.Localize();
+            nitens += objLocalizer.Localize();
             Debug.Log("Screenshot nº " + photosTaken + " taken");
-            photosTaken ++;
+            photosTaken++;
             StartCoroutine(NewSession());
         } else {
             Debug.Log("Finished screenshot session");
+            Debug.Log("Total of " + nitens + " itens detected in " + numberOfPhotosToTake + " photos taken");
+            Debug.Log("Median item density of " + nitens/numberOfPhotosToTake);
             sessionOnline = false;
             photosTaken = 0;
+            nitens = 0;
         }
         
     }

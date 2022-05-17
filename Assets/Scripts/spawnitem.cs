@@ -10,6 +10,7 @@ public class spawnitem : MonoBehaviour
     public int maxConnectedItems = 4;
     public float spawnMultipleChance = 0.3f;
     public float uprightItemChance = 0.3f;
+    public float padding = 0.015f;
 
     void Start(){
         StartCoroutine(SpawnRoutine());
@@ -40,7 +41,6 @@ public class spawnitem : MonoBehaviour
         }
 
         // Spawn that many instances
-        float padding = 0.025f;
         for (int i = 1; i <= extraInstances; i++){
             float d = item.GetComponent<BoxCollider>().size.x * item.transform.localScale.x;
             float distance = (d + padding) * i;
