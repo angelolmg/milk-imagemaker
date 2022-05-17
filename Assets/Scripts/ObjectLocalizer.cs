@@ -89,6 +89,9 @@ public class ObjectLocalizer : MonoBehaviour
                                                               objectRect.width/Screen.width,
                                                               objectRect.height/Screen.height);
 
+                        if(li.width < 0.08f || li.height < 0.08f)
+                            continue;
+                            
                         labelingInfos.Add(li);
                         
                     }
@@ -117,7 +120,7 @@ public class ObjectLocalizer : MonoBehaviour
         // Take screenshot once
         if (Input.GetKeyDown("space"))
         {
-            //print("Localizing objects...");
+            print("Localizing objects...");
             Localize();
         }
      

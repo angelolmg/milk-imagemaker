@@ -28,6 +28,8 @@
 .vscode/
 /Screenshots/
 /Labels/
+/Versions/
+
 
 # Gradle cache directory
 .gradle/
