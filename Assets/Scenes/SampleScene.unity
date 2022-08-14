@@ -1584,7 +1584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initiateSession: 0
   screenshotDelay: 1
-  numberOfPhotosToTake: 600
+  numberOfPhotosToTake: 30
 --- !u!4 &1836158306
 Transform:
   m_ObjectHideFlags: 0

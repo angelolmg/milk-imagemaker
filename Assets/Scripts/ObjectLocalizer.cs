@@ -89,7 +89,8 @@ public class ObjectLocalizer : MonoBehaviour
                                                               objectRect.width/Screen.width,
                                                               objectRect.height/Screen.height);
 
-                        if(li.width < 0.08f || li.height < 0.08f)
+                        float threshold = 0.08f;
+                        if(li.width < threshold || li.height < threshold)
                             continue;
                             
                         labelingInfos.Add(li);
